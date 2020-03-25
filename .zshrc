@@ -1,10 +1,11 @@
 # EEEEEE
-# EE            EmJames 
-# EEE  JJJJJJ   http://www.emjames.com 
-# EE       JJ
-# EEEEEE   JJ
-#    JJ    JJ
+# EE           EmJames 
+# EEE  JJJJJ   http://www.emjames.com 
+# EE      JJ
+# EEEEEE  JJ
+#    JJ   JJ
 #      JJJJ
+#
 #
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -110,3 +111,11 @@ source $ZSH/oh-my-zsh.sh
 #
 alias vim=nvim
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias touchej='f(){ touch "$@" ; cat Documents/header_ej.txt > "$@"; }; f'
+
+#
+# Use Vim as default editor
+export VISUAL=vim
+export EDITOR=$VISUAL
+# Enable Vim keybindings
+bindkey -v

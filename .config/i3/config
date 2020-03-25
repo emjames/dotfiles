@@ -52,7 +52,9 @@ bindsym $mod+Return exec urxvt256c
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+space exec rofi -show combi -eh 2 -width 100 -padding 500
+bindsym $mod+space exec rofi -show combi
+#bindsym $mod+space exec rofi -show combi -eh 2 -width 100 -padding 500 \
+#   -bw 0 -bc 000000 -bg 000000
 #bindsym $mod+space exec rofi -show run -lines 10 -eh 2 -width 100 -padding 500
 #    -opacity "95" -bw 0 -bc "$bg" -bg "$bg" -fg "$fg" -font "SF Pro Display 16"
     

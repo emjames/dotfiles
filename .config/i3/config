@@ -217,5 +217,5 @@ client.urgent               $accent 	$accent 	$accent 	$accent
 for_window [class="^.*"]    border pixel 2
 
 # Lock with gdm
-bindsym $mod+shift+x exec i3lock --show-failed-attempts \
+bindsym $mod+shift+x exec i3lock --tiling --show-failed-attempts \
     --image /home/ej/Pictures/i3lockscreen.png

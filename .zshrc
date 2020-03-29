@@ -121,6 +121,10 @@ export EDITOR=$VISUAL
 # Enable Vim keybindings
 bindkey -v
 
+# local npm
+NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ej/Workspace/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

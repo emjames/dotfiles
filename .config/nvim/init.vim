@@ -22,9 +22,9 @@ set showmatch 		" show matching brackets
 set ignorecase
 set mouse=v		" middle click mouse is paste
 set hlsearch
-set softtabstop=4
+set softtabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set number
 set relativenumber

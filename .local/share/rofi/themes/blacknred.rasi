@@ -1,36 +1,36 @@
 /*
  * ROFI Color theme
- * A red variation of arc-red-dark
+ * A red variation of arc-red-dark. Goes well with Lenovo ThinkPads
  * User: EmJames 
  */
 * {
+    red:                         rgba ( 225,  20,  10, 100 % );
+    /* red-2:                       rgba ( 230,   0,  18, 100 % ); */
+    malibu-blue:                 rgba ( 150, 196, 235, 100 % );
+    wistful-purple:              rgba ( 162, 173, 221, 100 % );
+    black:                       rgba (   0,   0,   0, 100 % );  
+
     selected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
     foreground:                  rgba ( 229, 229, 229, 100 % );
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 33, 33, 33, 59 % );
-    /* red:                         rgba ( 220, 50, 47, 100 % ); */
-    red:                         rgba ( 230, 0, 18, 100 % );
+    alternate-normal-background: rgba (  33,  33,  33,  59 % );
     selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
 
     urgent-foreground:           rgba ( 204, 102, 102, 100 % );
-    alternate-urgent-background: rgba ( 77, 77, 77, 90 % );
+    alternate-urgent-background: rgba (  77,  77,  77,  90 % );
 
     /* Active screen foreground */
-    active-foreground:           rgba ( 255, 102, 120, 100 % );
-
+    active-foreground:           @malibu-blue;
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
-    /* alternate-active-background: rgba ( 75, 81, 96, 89 % ); */
     alternate-active-background: rgba ( 77, 77, 77, 89 % );
-    
-    background:                  rgba ( 48, 48, 48, 95 % );
+    background:                  @black;
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
-
     lightfg:                     rgba ( 88, 104, 117, 100 % );
 
     /* Active */
-    selected-normal-background:  rgba ( 230, 0, 18, 100 % );
+    selected-normal-background:  @red;
     border-color:                rgba ( 137, 131, 124, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 29, 31, 33, 100 % );
@@ -40,8 +40,6 @@
     background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
     active-background:           rgba ( 29, 31, 33, 17 % );
-
-    /* Active */
     selected-active-background:  rgba ( 230, 0, 18, 100 % );
 }
 #window {
@@ -146,4 +144,4 @@
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
- 
+/* vim:ft=css 

@@ -159,15 +159,15 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Assign specific software to workspaces
 #
 # Run Thunderbird
-exec thunderbird
+#exec thunderbird
 assign [class="Thunderbird"] $ws10
 
 # Run Chromium with calendar
-exec chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep
+#exec chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep
 assign [class="Chromium-browser" instance="crx_kjbdgfilnfhdoflbpgamdcdgpehopbep"] $ws9
 
 # Run Toggl desktop
-exec toggledesktop
+# exec TogglDesktop &
 assign [class="Toggl Desktop"] $ws9
 
 # reload the configuration file

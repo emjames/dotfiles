@@ -1,11 +1,13 @@
 URxvt.perl-lib: /usr/lib64/perl5
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
 URxvt.font: xft:monospace:size=12
 URxvt.scrollBar: false
-URxvt.iconFile: /usr/share/icons/Adwaita/32x32/apps/utilities-terminal-symbolic.symbolic.png
+URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 
 !! Colorscheme github/eduvm
 !

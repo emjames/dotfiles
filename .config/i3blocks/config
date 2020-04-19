@@ -11,18 +11,34 @@ SCRIPTS_DIR=~/.config/i3blocks/
 separator=true
 separator_block_width=15
 
-[greetings]
-color=#f5af19
-command=echo "Hello, $USER!"
-interval=once
+[cpu_usage2]
+command=~/.config/i3blocks/cpu_usage2
+markup=pango
+interval=persist
+min_width=CPU 100.00%
+
+[disk]
+command=~/.config/i3blocks/disk.sh
+label=/ 
+interval=60
+
+[memory]
+command=~/.config/i3blocks/memory.sh
+label=MEM:
+interval=30
 
 [batterybar]
 command=~/.config/i3blocks/batterybar.sh
-label=Bat:
+label=BAT:
 interval=5
 markup=pango
 min_width=Bat: ■■■■■
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date '+%Y-%m-%d %H:%M'
 interval=1
+
+[greetings]
+color=#E60012
+command=echo "$USER"
+interval=once

@@ -109,14 +109,20 @@ source $ZSH/oh-my-zsh.sh
 #
 # EmJames aliases
 #
-alias vim=nvim
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias touchej='f(){ touch "$@" ; cat Documents/header_ej.txt > "$@"; }; f'
 alias university='/home/ej/Workspace/NCTU/'
+alias vimrc='nvim ~/.config/nvim/init.vim'
+alias zshrc='nvim ~/.zshrc'
+alias i3rc='nvim ~/.config/i3/config'
+alias docker=podman
+alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
+alias wifi='nmcli d wifi'
+alias open='xdg-open'
 
 #
 # Use Vim as default editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 # Enable Vim keybindings
 bindkey -v
@@ -141,3 +147,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ej/bin:/home/ej/Workspace/anaconda3/bin:/home/ej/Workspace/anaconda3/condabin"
+# Add local Applications to path
+export PATH="$PATH:/home/ej/bin/"

@@ -8,9 +8,11 @@ filetype off            " required for bundler
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
+Plug 'ap/vim-css-color'
+Plug 'Chiel92/vim-autoformat'
 
 
 " All plugins must be added before the following line
@@ -46,7 +48,7 @@ set nowritebackup
 set cmdheight=2
 
 " lower updatetime, better user experience
-set updatetime=300
+" set updatetime=300
 
 " Don't pass messages to |ins-competion-menu|
 set shortmess+=c

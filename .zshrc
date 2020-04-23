@@ -120,6 +120,10 @@ alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfiln
 alias wifi='nmcli d wifi'
 alias open='xdg-open'
 
+# EmJames exports
+#
+export XDG_CONFIG_HOME=$HOME/.config
+
 #
 # Use Vim as default editor
 export VISUAL=nvim

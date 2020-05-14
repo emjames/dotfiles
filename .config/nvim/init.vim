@@ -8,12 +8,16 @@ filetype off            " required for bundler
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
+Plug 'morhetz/gruvbox'
 " Plug 'lervag/vimtex'
+Plug 'jremmen/vim-ripgrep'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
 Plug 'Chiel92/vim-autoformat'
-
+Plug 'preservim/nerdtree'
 
 " All plugins must be added before the following line
 call plug#end()

@@ -27,18 +27,25 @@ filetype plugin indent on " required
 " vimrc
 set showmatch 		" show matching brackets
 set ignorecase
-set mouse=v		" middle click mouse is paste
+set mouse=v		    " middle click mouse is paste
 set hlsearch
-set softtabstop=2
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set expandtab
-set shiftwidth=2
 set autoindent
 set number
 set relativenumber
-set wildmode=longest,list
-set cc=80		" set an 80 col limit 
+" set wildmode=longest,list
+set incsearch
+set cc=80		    " set an 80 col limit 
+set textwidth=80
+set wrap
+" set linebreak
 syntax on
 colorscheme codedark
+" colorscheme gruvbox
+" colorscheme mars
+let mapleader=" "
 
 " Coc configs
 "
@@ -47,6 +54,8 @@ set hidden
 " Some servers have issues with backup files
 set nobackup
 set nowritebackup
+set undodir=~/.vim/undodir
+set undofile
 
 " Give more space for displaying messages
 set cmdheight=2
@@ -57,7 +66,7 @@ set cmdheight=2
 " Don't pass messages to |ins-competion-menu|
 set shortmess+=c
 
-" Always show the signcolumn, oteherwise it would shift the text after 
+" Always show the signcolumn, otherwise it would shift the text after 
 " diagnostics appear/become resolved
 set signcolumn=yes
 
@@ -159,10 +168,46 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
+" ========================================
+" Statusline
+" ========================================
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline=
+set statusline+=%0*\ %n\      " buffer number
+set statusline+=%1*\ %f
+set statusline+=%=
+set statusline+=%c,
+set statusline+=%l
+" set statusline+=%l/%L " line/total_line
+set statusline+=%5*\%{FugitiveStatusline()}
+" set statusline+=%5*\%{GitBranch()}
+" set statusline+=%1*\ (%p%%)
+set statusline+=%1*\ 
+" set statusline+=\ %{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline+=\ %{coc#status()}
+
+function! GitBranch()
+  if !exists("!git")
+    return "BRANCH"
+endfunction
+" ========================================
+" Colors
+" ========================================
+" statusline
+hi User5 ctermfg=DarkRed
+" ========================================
+" Mappings 
+" ========================================
+" Mappings Emjames
+nmap <C-b> :NERDTreeToggle<CR>
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+" Project search
+nnoremap <leader>ps :Rg<SPACE>
 
 " Mappings using CoCList:
 " Show all diagnostics.

@@ -174,3 +174,6 @@ export PATH="$PATH:/home/ej/.npm-packages/bin/"
 JAVA_HOME=/usr/local/java/jdk1.8.0_261
 export JAVA_HOME
 export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"
+
+# Synch ranger path with shell
+alias ranger='source ranger'

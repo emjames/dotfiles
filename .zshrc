@@ -177,3 +177,7 @@ export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"
 
 # Synch ranger path with shell
 alias ranger='source ranger'
+
+# search in zsh completion with vi
+bindkey '^P' up-line-or-search
+bindkey '^N' down-line-or-search

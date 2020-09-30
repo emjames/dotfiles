@@ -38,7 +38,13 @@ min_width=Bat: ■■■■■
 command=date '+%Y-%m-%d %H:%M'
 interval=1
 
-[greetings]
-color=#E60012
-command=echo "$USER"
+[language]
+# label=LNG
+command=xkblayout-state print %s | awk '{print toupper($0)}'
 interval=once
+signal=1
+
+# [greetings]
+# color=#E60012
+# command=echo "$USER"
+# interval=once

@@ -18,6 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf'
 
 " All plugins must be added before the following line
 call plug#end()
@@ -38,7 +39,7 @@ set relativenumber
 " set wildmode=longest,list
 set incsearch
 set cc=80		    " set an 80 col limit 
-set textwidth=80
+" set textwidth=80
 set wrap
 " set linebreak
 syntax on
@@ -208,6 +209,7 @@ map <C-k> <C-W>k
 map <C-l> <C-W>l
 " Project search
 nnoremap <leader>ps :Rg<SPACE>
+
 
 " Mappings using CoCList:
 " Show all diagnostics.

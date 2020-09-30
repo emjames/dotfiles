@@ -119,10 +119,18 @@ alias docker=podman
 alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
 alias wifi='nmcli d wifi'
 alias open='xdg-open'
+alias present='pdfpc'
+alias notes='Joplin'
+alias sshtoccwang="echo 'ssh to 140.113.154.53' && ssh 140.113.154.53"
+alias vim='nvim'
+alias citExplorer="java -jar ~/Applications/CiteNetExplorer/CitNetExplorer.jar &"
+alias pingg="ping www.google.com -c 5"
 
 # EmJames exports
 #
 export XDG_CONFIG_HOME=$HOME/.config
+export CONDA_HOME=/home/ej/Workspace/anaconda3/
+export TERM="rxvt-256color"
 
 #
 # Use Vim as default editor
@@ -130,6 +138,8 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 # Enable Vim keybindings
 bindkey -v
+
+exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
 
 # local npm
 NPM_PACKAGES="${HOME}/.npm-packages"
@@ -144,12 +154,23 @@ else
     if [ -f "/home/ej/Workspace/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/home/ej/Workspace/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ej/Workspace/anaconda3/bin:$PATH"
+       export PATH="/home/ej/Workspace/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ej/bin:/home/ej/Workspace/anaconda3/bin:/home/ej/Workspace/anaconda3/condabin"
+# export PATH="usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ej/bin:/home/ej/Workspace/anaconda3/bin:/home/ej/Workspace/anaconda3/condabin"
 # Add local Applications to path
 export PATH="$PATH:/home/ej/bin/"
+
+# Add .local/bin to path
+export PATH="$PATH:/.local/bin"
+
+# Add local bin npm to path
+export PATH="$PATH:/home/ej/.npm-packages/bin/"
+
+# Add Java
+JAVA_HOME=/usr/local/java/jdk1.8.0_261
+export JAVA_HOME
+export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"

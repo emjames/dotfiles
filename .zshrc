@@ -115,7 +115,7 @@ alias university='/home/ej/Workspace/NCTU/'
 alias vimrc='nvim ~/.config/nvim/init.vim'
 alias zshrc='nvim ~/.zshrc'
 alias i3rc='nvim ~/.config/i3/config'
-alias docker=podman
+# alias docker=podman
 alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
 alias wifi='nmcli d wifi'
 alias open='xdg-open'

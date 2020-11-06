@@ -107,11 +107,15 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+# sticky window toggle
+bindsym $mod+Shift+s sticky toggle
+
 # toggle tiling / floating
-# bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
+bindsym $mod+Tab focus mode_toggle
 
 
 # focus the parent container

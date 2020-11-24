@@ -229,3 +229,9 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+
+" ========================================
+" [au]tocmd
+" ========================================
+au filetype tex setlocal tabstop=2 softtabstop=2 shiftwidth=2

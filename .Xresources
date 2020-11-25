@@ -1,5 +1,5 @@
-URxvt.perl-lib: /usr/lib64/perl5
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.perl-lib: $HOME/.urxvt/ext
+URxvt.perl-ext-common:  default,matcher,selection-to-clipboard,font-size
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 

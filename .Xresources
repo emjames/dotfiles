@@ -5,7 +5,10 @@ URxvt.matcher.button: 1
 
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
-URxvt.font: xft:monospace:size=12
+URxvt.font: xft:inconsolatan:size=16,\
+            xft:SpaceMono:size=12,\
+            xft:monospace:size=12,\
+            xft:Noto Sans CJK TC:regular:pixelsize=14
 URxvt.scrollBar: false
 URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 

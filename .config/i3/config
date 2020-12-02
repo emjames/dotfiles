@@ -230,7 +230,10 @@ bar {
         strip_workspace_numbers yes
         colors {
           #                   border        background    text
-          focused_workspace   #FFFFFF       #000000       #FFFFFF
+          #focused_workspace   #FFFFFF       #000000       #FFFFFF
+          focused_workspace   #000000       #000000       #E60012
+          inactive_workspace   #000000       #000000       #0086E6
+          active_workspace   #000000       #000000       #0086E6
         }
         font pango:monospace 10
 }

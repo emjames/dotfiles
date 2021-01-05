@@ -178,6 +178,12 @@ export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"
 # Synch ranger path with shell
 alias ranger='source ranger'
 
+# The word python is too long
+alias py='python'
+
 # search in zsh completion with vi
 bindkey '^P' up-line-or-search
 bindkey '^N' down-line-or-search
+
+# LaTeX aliases
+alias newbeamer='f(){ cp $HOME/Documents/LaTeX_Templates/Presentations/intro.tex .}; f'

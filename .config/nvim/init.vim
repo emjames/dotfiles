@@ -18,7 +18,8 @@ Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
+Plug 'junegunn/fzf.vim'
 
 " All plugins must be added before the following line
 call plug#end()
@@ -208,9 +209,14 @@ map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
+" map <C-Shift><f>
 " Project search
 nnoremap <leader>ps :Rg<SPACE>
-
+nnoremap <leader>ff :call fzf#run()<CR>
+"
+" Project Refactor Word
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" nnoremap <silent> <C-f> :Files<CR>
 
 " Mappings using CoCList:
 " Show all diagnostics.

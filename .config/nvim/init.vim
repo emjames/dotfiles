@@ -41,7 +41,11 @@ set relativenumber
 set incsearch
 set cc=80		    " set an 80 col limit 
 " set textwidth=80
-set wrap
+set nowrap
+augroup WrapLineInTeXFile
+    autocmd!
+    autocmd FileType tex setlocal wrap
+augroup END
 " set linebreak
 syntax on
 colorscheme codedark

@@ -50,8 +50,8 @@ augroup WrapLineInTeXFile
 augroup END
 " set linebreak
 syntax on
-colorscheme codedark
-" colorscheme gruvbox
+" colorscheme codedark
+colorscheme gruvbox
 " colorscheme mars
 let mapleader=" "
 

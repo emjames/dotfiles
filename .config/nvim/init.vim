@@ -27,6 +27,8 @@ call plug#end()
 filetype plugin indent on " required
 
 " vimrc
+set cursorcolumn    " show which column the cursor is at
+set cursorline      " show which line the cursor is at
 set showmatch 		" show matching brackets
 set ignorecase
 set mouse=v		    " middle click mouse is paste
@@ -67,7 +69,7 @@ set undofile
 set cmdheight=2
 
 " lower updatetime, better user experience
-" set updatetime=300
+set updatetime=300
 
 " Don't pass messages to |ins-competion-menu|
 set shortmess+=c

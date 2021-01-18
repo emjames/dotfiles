@@ -2,4 +2,4 @@
 	name = ej
 	email = ej@emjames.com
 [alias]
-	tree = log --oneline --decorate --all --graph
+	tree = log --oneline --decorate --all --graph --color

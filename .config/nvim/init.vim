@@ -242,6 +242,11 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" ========================================
+" Modelica
+" ========================================
+au BufRead,BufNewFile *.mo set filetype=modelica
+au filetype modelica setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " ========================================
 " [au]tocmd

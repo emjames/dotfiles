@@ -33,6 +33,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Run fcitx
+exec --no-startup-id fcitx -d
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -115,7 +118,7 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
-bindsym $mod+Tab focus mode_toggle
+# bindsym $mod+Tab focus mode_toggle
 
 
 # focus the parent container
@@ -172,6 +175,10 @@ bindsym $mod+Shift+u move container to workspace number $ws11
 bindsym $mod+Shift+i move container to workspace number $ws12
 bindsym $mod+Shift+o move container to workspace number $ws13
 bindsym $mod+Shift+t move container to workspace number $ws14
+
+# switch between the current and the previously focused workspace
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth
 
 # Assign specific software to workspaces
 #
@@ -232,8 +239,16 @@ bar {
           #                   border        background    text
           #focused_workspace   #FFFFFF       #000000       #FFFFFF
           focused_workspace   #000000       #000000       #E60012
+          # inactive_workspace   #000000       #000000       #719611
+          # # Green
+          # inactive_workspace   #000000       #000000       #569CD6
+          # # Blue
+          # active_workspace   #000000       #000000       #0086E6
+
+          # Blue
           inactive_workspace   #000000       #000000       #0086E6
-          active_workspace   #000000       #000000       #0086E6
+          # Green
+          active_workspace   #000000       #000000       #719611
         }
         font pango:monospace 10
 }

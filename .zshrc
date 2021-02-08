@@ -17,7 +17,7 @@ export ZSH="/home/ej/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="kphoen"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -110,27 +110,29 @@ source $ZSH/oh-my-zsh.sh
 # EmJames aliases
 #
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias touchej='f(){ touch "$@" ; cat Documents/header_ej.txt > "$@"; }; f'
-alias university='/home/ej/Workspace/NCTU/'
 alias vimrc='nvim ~/.config/nvim/init.vim'
 alias zshrc='nvim ~/.zshrc'
-alias i3rc='nvim ~/.config/i3/config'
+#alias i3rc='nvim ~/.config/i3/config'
 # alias docker=podman
-alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
-alias wifi='nmcli d wifi'
 alias open='xdg-open'
-alias present='pdfpc'
-alias notes='Joplin'
-alias sshtoccwang="echo 'ssh to 140.113.154.53' && ssh 140.113.154.53"
 alias vim='nvim'
-alias citExplorer="java -jar ~/Applications/CiteNetExplorer/CitNetExplorer.jar &"
 alias pingg="ping www.google.com -c 5"
+
+alias startJupyterServer='jupyter notebook --no-browser --port 1377'
 
 # EmJames exports
 #
 export XDG_CONFIG_HOME=$HOME/.config
 export CONDA_HOME=/home/ej/Workspace/anaconda3/
 export TERM="urxvt"
+
+export MKL_INC="/opt/intel/sw_dev_tools/mkl/include"
+
+# Gurobi env variables
+export GUROBI_HOME="/opt/gurobi903/linux64"
+export PATH="$GUROBI_HOME/bin:$PATH"
+export LD_LIBRARY_PATH="$GUROBI_HOME/lib"
+export GRB_LICENSE_FILE="/opt/gurobi903/gurobi.lic"
 
 #
 # Use Vim as default editor
@@ -139,7 +141,10 @@ export EDITOR=$VISUAL
 # Enable Vim keybindings
 bindkey -v
 
-exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
+# nvm config
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # local npm
 NPM_PACKAGES="${HOME}/.npm-packages"

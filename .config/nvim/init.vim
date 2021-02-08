@@ -8,7 +8,7 @@ filetype off            " required for bundler
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
-Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
 " Plug 'lervag/vimtex'
 Plug 'jremmen/vim-ripgrep'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -53,8 +53,9 @@ augroup WrapLineInTeXFile
 augroup END
 " set linebreak
 syntax on
+set background=dark
 " colorscheme codedark
-colorscheme gruvbox
+colorscheme solarized
 " colorscheme mars
 let mapleader=" "
 

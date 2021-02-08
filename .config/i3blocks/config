@@ -11,31 +11,40 @@ SCRIPTS_DIR=~/.config/i3blocks/
 separator=true
 separator_block_width=15
 
+# [curr_window]
+# command=~/.config/i3blocks/curr_window.sh
+# interval=persist
+
 [cpu_usage2]
-command=~/.config/i3blocks/cpu_usage2
+command=~/.config/i3blocks/cpu_usage2 -l ""
+label=<span color='#569CD6'>CPU</span>
 markup=pango
 interval=persist
 min_width=CPU 100.00%
 
 [disk]
 command=~/.config/i3blocks/disk.sh
-label=/ 
+label=<span color='#569CD6'>~/ </span>
+markup=pango
 interval=60
 
 [memory]
 command=~/.config/i3blocks/memory.sh
-label=MEM:
+label=<span color='#569CD6'>MEM </span>
+markup=pango
 interval=30
 
 [batterybar]
 command=~/.config/i3blocks/batterybar.sh
-label=BAT:
+label=<span color='#569CD6'>BAT </span>
 interval=5
 markup=pango
 min_width=Bat: ■■■■■
 
-[time]
-command=date '+%Y-%m-%d %H:%M'
+[date]
+#command=date '+%Y-%m-%d %H:%M'
+command=~/.config/i3blocks/date.sh
+markup=pango
 interval=1
 
 [language]

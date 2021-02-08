@@ -124,7 +124,7 @@ alias startJupyterServer='jupyter notebook --no-browser --port 1377'
 #
 export XDG_CONFIG_HOME=$HOME/.config
 export CONDA_HOME=/home/ej/Workspace/anaconda3/
-export TERM="urxvt"
+export TERM="rxvt-unicode-256color"
 
 export MKL_INC="/opt/intel/sw_dev_tools/mkl/include"
 

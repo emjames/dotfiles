@@ -130,7 +130,7 @@ alias pingg="ping www.google.com -c 5"
 #
 export XDG_CONFIG_HOME=$HOME/.config
 export CONDA_HOME=/home/ej/Workspace/anaconda3/
-export TERM="rxvt-256color"
+export TERM="urxvt"
 
 #
 # Use Vim as default editor

@@ -20,6 +20,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-startify'
+" Python coc-jedi
+" Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 
 " All plugins must be added before the following line
 call plug#end()
@@ -216,6 +219,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 " map <C-Shift><f>
+
 " Project search
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <leader>ff :call fzf#run()<CR>

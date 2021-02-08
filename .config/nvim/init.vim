@@ -8,7 +8,6 @@ filetype off            " required for bundler
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
-Plug 'altercation/vim-colors-solarized'
 " Plug 'lervag/vimtex'
 Plug 'jremmen/vim-ripgrep'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -54,8 +53,7 @@ augroup END
 " set linebreak
 syntax on
 set background=dark
-" colorscheme codedark
-colorscheme solarized
+colorscheme codedark
 " colorscheme mars
 let mapleader=" "
 

@@ -129,8 +129,6 @@ alias pingg="ping www.google.com -c 5"
 # EmJames exports
 #
 export XDG_CONFIG_HOME=$HOME/.config
-export CONDA_HOME=/home/ej/Workspace/anaconda3/
-export TERM="urxvt"
 
 #
 # Use Vim as default editor
@@ -141,10 +139,7 @@ bindkey -v
 
 exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
 
-# local npm
-NPM_PACKAGES="${HOME}/.npm-packages"
-export PATH="$PATH:$NPM_PACKAGES/bin"
-
+export TERMINFO=/usr/share/terminfo
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ej/Workspace/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"

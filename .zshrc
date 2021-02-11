@@ -182,3 +182,8 @@ bindkey '^N' down-line-or-search
 
 # LaTeX aliases
 alias newbeamer='f(){ cp $HOME/Documents/LaTeX_Templates/Presentations/intro.tex .}; f'
+
+# IBUS
+export GTK_IM_MODULE=ibus
+export XMODIfiERS=@im=bus
+export QT_IM_MODULE=ibus

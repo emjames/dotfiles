@@ -1,3 +1,7 @@
+/* input method */
+URxvt.inputMethod: ibus
+URxvt.preeditType: OverTheSpot
+
 URxvt.perl-lib: $HOME/.urxvt/ext
 URxvt.perl-ext-common:  default,matcher,selection-to-clipboard,font-size
 URxvt.url-launcher: /usr/bin/xdg-open

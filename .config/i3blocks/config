@@ -47,12 +47,6 @@ command=~/.config/i3blocks/date.sh
 markup=pango
 interval=1
 
-[language]
-# label=LNG
-command=xkblayout-state print %s | awk '{print toupper($0)}'
-interval=once
-signal=1
-
 # [greetings]
 # color=#E60012
 # command=echo "$USER"

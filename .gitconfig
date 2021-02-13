@@ -3,3 +3,6 @@
 	email = ej@emjames.com
 [alias]
 	tree = log --oneline --decorate --all --graph --color
+    tree1 = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset) %C(bold green)%d%C(reset) %C(white)%s%C(reset) %C(bold white) %an%C(reset)%C(bold yellow) %ar%C(reset)' --all
+    tree2 = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset) %C(dim white)%aD%C(reset) %C(bold green)%d%C(reset)%C(dim white)(%ar)%C(reset)%n''        %C(bold blue)%s - %an%C(reset)' --all
+

@@ -1,3 +1,12 @@
+/* smoothing fonts */
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
 /* input method */
 URxvt.inputMethod: ibus
 URxvt.preeditType: OverTheSpot
@@ -9,10 +18,12 @@ URxvt.matcher.button: 1
 
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
-URxvt.font: xft:inconsolatan:size=16,\
-            xft:SpaceMono:size=12,\
-            xft:monospace:size=12,\
+URxvt.font: xft:InconsolataN:size=15,\
+            xft:SpaceMono:size=14,\
+            xft:monospace:size=14,\
             xft:Noto Sans CJK TC:regular:pixelsize=14
+            xft:FiraCode:size=12,\
+            xft:Inconsolatazi4:size=15,\
 URxvt.scrollBar: false
 URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 

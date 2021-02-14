@@ -103,6 +103,14 @@ endfunction
 " use to trigger completion
 inoremap <silent><expr> <c-space> coc#refresh()
 
+if has('nvim-0.4.3') || has('patch-8.2.0750')
+    nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+    nnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    " Scroll full page. Modify #scroll(1, 1) to scroll by one line
+    inoremap <nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+    inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+endif
+
 " use <c-r> to confirm completion `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm
 if has('patch8.1.1068')
@@ -223,6 +231,13 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 " map <C-Shift><f>
+
+" ========================================
+" fzf commands
+" ========================================
+" Windows
+nnoremap <leader>w :Windows<CR>
+nnoremap <leader>bu :Buffers<CR>
 
 " Project search
 nnoremap <leader>ps :Rg<SPACE>

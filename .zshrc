@@ -7,9 +7,6 @@
 #      JJJJ
 #
 #
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/ej/.oh-my-zsh"
 
@@ -118,7 +115,6 @@ alias university='/home/ej/Workspace/NCTU/'
 alias vimrc='nvim ~/.config/nvim/init.vim'
 alias zshrc='nvim ~/.zshrc'
 alias i3rc='nvim ~/.config/i3/config'
-# alias docker=podman
 alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
 alias wifi='nmcli d wifi'
 alias open='xdg-open'
@@ -126,17 +122,15 @@ alias open='xdg-open'
 alias openb='openb(){ open $1 &! }; openb'
 alias present='pdfpc'
 alias notes='Joplin'
-alias sshtoccwang="echo 'ssh to 140.113.154.53' && ssh 140.113.154.53"
 alias vim='nvim'
 alias citExplorer="java -jar ~/Applications/CiteNetExplorer/CitNetExplorer.jar &"
 alias pingg="ping www.google.com -c 5"
 
 # EmJames exports
-#
 export XDG_CONFIG_HOME=$HOME/.config
 
-#
-# Use Vim as default editor
+
+# Use nVim as default editor
 export VISUAL=nvim
 export EDITOR=$VISUAL
 # Enable Vim keybindings
@@ -160,7 +154,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# export PATH="usr/share/Modules/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/ej/bin:/home/ej/Workspace/anaconda3/bin:/home/ej/Workspace/anaconda3/condabin"
 # Add local Applications to path
 export PATH="$PATH:/home/ej/bin/"
 
@@ -175,7 +168,7 @@ JAVA_HOME=/usr/local/java/jdk1.8.0_261
 export JAVA_HOME
 export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"
 
-# Synch ranger path with shell
+# Sync ranger path with shell
 alias ranger='source ranger'
 
 # The word python is too long
@@ -200,7 +193,7 @@ function newbeamer() {
     fi
 
     if [[ -d "$folder/$name" ]] then
-        print "$folder/$name exists. Check path and name, then try again."
+        print "$folder/$name exists. Check folder and name, then try again."
         return 1
     fi
 

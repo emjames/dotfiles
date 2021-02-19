@@ -122,6 +122,8 @@ alias i3rc='nvim ~/.config/i3/config'
 alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
 alias wifi='nmcli d wifi'
 alias open='xdg-open'
+# open in the background disown
+alias openb='openb(){ open $1 &! }; openb'
 alias present='pdfpc'
 alias notes='Joplin'
 alias sshtoccwang="echo 'ssh to 140.113.154.53' && ssh 140.113.154.53"

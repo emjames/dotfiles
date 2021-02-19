@@ -186,7 +186,29 @@ bindkey '^P' up-line-or-search
 bindkey '^N' down-line-or-search
 
 # LaTeX aliases
-alias newbeamer='f(){ cp $HOME/Documents/LaTeX_Templates/Presentations/intro.tex .}; f'
+function newbeamer() {
+    # Note the lack of spaces at the equal sign
+    folder="."
+    name="Presentation"
+
+    if [[ $1 ]]; then
+        folder=$1
+    fi
+
+    if [[ $2 ]]; then
+        name=$2
+    fi
+
+    if [[ -d "$folder/$name" ]] then
+        print "$folder/$name exists. Check path and name, then try again."
+        return 1
+    fi
+
+    print "Presentation location: $folder/$name"
+    cp -r $HOME/Documents/LaTeX_Templates/Presentations/ "$folder/$name"
+
+    return 0
+}
 
 # IBUS
 export GTK_IM_MODULE=ibus

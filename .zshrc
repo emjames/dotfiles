@@ -112,7 +112,7 @@ fi
 #
 # EmJames aliases
 #
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='c(){ /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@" };c'
 alias touchej='f(){ touch "$@" ; cat Documents/header_ej.txt > "$@"; }; f'
 alias university='/home/ej/Workspace/NCTU/'
 alias vimrc='nvim ~/.config/nvim/init.vim'

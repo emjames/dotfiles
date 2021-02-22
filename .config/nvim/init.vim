@@ -231,6 +231,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 " map <C-Shift><f>
+" Search for visually selected text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
 
 " ========================================
 " fzf commands
@@ -238,6 +241,7 @@ map <C-l> <C-W>l
 " Windows
 nnoremap <leader>w :Windows<CR>
 nnoremap <leader>bu :Buffers<CR>
+nnoremap <leader>fi :Files<CR>
 
 " Project search
 nnoremap <leader>ps :Rg<SPACE>

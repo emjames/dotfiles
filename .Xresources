@@ -1,3 +1,4 @@
+URxvt.scrollBar: false
 /* smoothing fonts */
 Xft.autohint: 0
 Xft.antialias: 1
@@ -24,7 +25,6 @@ URxvt.font: xft:InconsolataN:size=15,\
             xft:Noto Sans CJK TC:regular:pixelsize=14
             xft:FiraCode:size=12,\
             xft:Inconsolatazi4:size=15,\
-URxvt.scrollBar: false
 URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 
 /* *accent:         #E60012 */

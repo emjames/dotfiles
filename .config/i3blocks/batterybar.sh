@@ -106,6 +106,7 @@ do
     "Discharging"|"Unknown")
         if (( percentages[$i] >= 0 && percentages[$i] < 10 )); then
             color="${dis_colors[0]}"
+            exec i3-nagbar -t warning -m 'Battery is under 10%!' > /dev/null 2>&1
         elif (( percentages[$i] >= 10 && percentages[$i] < 20 )); then
             color="${dis_colors[1]}"
         elif (( percentages[$i] >= 20 && percentages[$i] < 30 )); then

@@ -143,6 +143,8 @@ set $ws11 "11:U"
 set $ws12 "12:I"
 set $ws13 "13:O"
 set $ws14 "14:Term"
+set $ws15 "15:Music"
+set $ws16 "16:Notes"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -159,6 +161,8 @@ bindsym $mod+u workspace number $ws11
 bindsym $mod+i workspace number $ws12
 bindsym $mod+o workspace number $ws13
 bindsym $mod+t workspace number $ws14
+bindsym $mod+m workspace number $ws15
+bindsym $mod+n workspace number $ws16
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -175,6 +179,8 @@ bindsym $mod+Shift+u move container to workspace number $ws11
 bindsym $mod+Shift+i move container to workspace number $ws12
 bindsym $mod+Shift+o move container to workspace number $ws13
 bindsym $mod+Shift+t move container to workspace number $ws14
+bindsym $mod+Shift+m move container to workspace number $ws15
+bindsym $mod+Shift+n move container to workspace number $ws16
 
 # switch between the current and the previously focused workspace
 bindsym $mod+Tab workspace back_and_forth

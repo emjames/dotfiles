@@ -207,3 +207,16 @@ function newbeamer() {
 export GTK_IM_MODULE=ibus
 export XMODIfiERS=@im=bus
 export QT_IM_MODULE=ibus
+
+# Unzip
+function unzipd() {
+    if [[ $# != 1 ]] then
+        echo "Name of archive to extract is missing";
+        return 1;
+    fi
+
+    zipfile="$1"
+    zipdir=${1%.zip}
+
+    unzip -d "$zipdir" "$zipfile"
+}

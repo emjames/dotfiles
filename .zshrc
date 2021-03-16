@@ -220,3 +220,6 @@ function unzipd() {
 
     unzip -d "$zipdir" "$zipfile"
 }
+
+# Include PlatformIO in path
+export PATH="$PATH:$HOME/.platformio/penv/bin/"

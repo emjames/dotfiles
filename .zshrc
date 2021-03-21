@@ -8,7 +8,7 @@
 #
 #
 # Path to your oh-my-zsh installation.
-export ZSH="/home/ej/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,7 +111,7 @@ fi
 #
 alias config='c(){ /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME "$@" };c'
 alias touchej='f(){ touch "$@" ; cat Documents/header_ej.txt > "$@"; }; f'
-alias university='/home/ej/Workspace/NCTU/'
+alias university='$HOME/Workspace/NCTU/'
 alias vimrc='nvim ~/.config/nvim/init.vim'
 alias zshrc='nvim ~/.zshrc'
 alias i3rc='nvim ~/.config/i3/config'
@@ -141,27 +141,27 @@ exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
 export TERMINFO=/usr/share/terminfo
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ej/Workspace/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/Workspace/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ej/Workspace/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ej/Workspace/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/Workspace/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/Workspace/anaconda3/etc/profile.d/conda.sh"
     else
-       export PATH="/home/ej/Workspace/anaconda3/bin:$PATH"
+       export PATH="$HOME/Workspace/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 # Add local Applications to path
-export PATH="$PATH:/home/ej/bin/"
+export PATH="$PATH:$HOME/bin/"
 
 # Add .local/bin to path
-export PATH="$PATH:/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Add local bin npm to path
-export PATH="$PATH:/home/ej/.npm-packages/bin/"
+export PATH="$PATH:$HOME/.npm-packages/bin/"
 
 # Add Java
 JAVA_HOME=/usr/local/java/jdk1.8.0_261

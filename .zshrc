@@ -88,6 +88,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+# Use neovim-remote for synctex
+alias nvim="NVIM_LISTEN_ADDRESS=/tmp/nvimsocket nvim"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'

@@ -3,3 +3,5 @@ map <C-i> zoom in
 map <C-o> zoom out
 map <C-r> recolor
 # set sandbox strict
+set synctex true
+set synctex-editor-command "nvr --remote +%{line} %{input}"

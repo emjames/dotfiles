@@ -57,7 +57,7 @@ syntax on
 colorscheme gruvbox
 " colorscheme mars
 let mapleader=" "
-let maplocalleader="\\"
+let maplocalleader=";"
 " change the shape of the cursor in different modes
 let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
@@ -287,4 +287,4 @@ au filetype tex setlocal tabstop=2 softtabstop=2 shiftwidth=2
 " let g:latex_view_general_viewer='zathura'
 let g:vimtex_view_method='zathura'
 let g:tex_flavor='latex'
-nmap <C-n> :VimtexTocOpen<CR>
+nmap <C-n> <Plug>(vimtex-toc-open)

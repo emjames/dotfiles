@@ -90,11 +90,11 @@ set signcolumn=yes
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " tab for trigger completion with characters ahead and navigate
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+      " \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -180,8 +180,8 @@ omap af <Plug>(coc-funcobj-a)
 " Use <TAB> for selections ranges.
 " NOTE: Requires 'textDocument/selectionRange' support from the language server.
 " coc-tsserver, coc-python are the examples of servers that support it.
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
+" nmap <silent> <TAB> <Plug>(coc-range-select)
+" xmap <silent> <TAB> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -287,4 +287,4 @@ au filetype tex setlocal tabstop=2 softtabstop=2 shiftwidth=2
 " let g:latex_view_general_viewer='zathura'
 let g:vimtex_view_method='zathura'
 let g:tex_flavor='latex'
-nmap <C-n> <Plug>(vimtex-toc-open)
+nmap <C-v> <Plug>(vimtex-toc-open)

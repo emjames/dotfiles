@@ -21,6 +21,8 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
+Plug 'ferrine/md-img-paste.vim'
+
 " Python coc-jedi
 " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 
@@ -287,4 +289,12 @@ au filetype tex setlocal tabstop=2 softtabstop=2 shiftwidth=2
 " let g:latex_view_general_viewer='zathura'
 let g:vimtex_view_method='zathura'
 let g:tex_flavor='latex'
-nmap <C-v> <Plug>(vimtex-toc-open)
+nmap <C-x> <Plug>(vimtex-toc-open)
+
+" ========================================
+" md-img-paste configuration
+" ========================================
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+" there are some defaults for image directory and image name, you can change them
+" let g:mdip_imgdir = 'img'
+" let g:mdip_imgname = 'image'

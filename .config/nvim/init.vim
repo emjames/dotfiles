@@ -22,6 +22,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'ferrine/md-img-paste.vim'
+Plug 'fiatjaf/neuron.vim'
+" Plug 'chiefnoah/neuron-v2.vim'
+Plug 'mileszs/ack.vim'
 
 " Python coc-jedi
 " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -298,3 +301,17 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 " there are some defaults for image directory and image name, you can change them
 " let g:mdip_imgdir = 'img'
 " let g:mdip_imgname = 'image'
+
+" ========================================
+" Zettelkasten configuration
+" ========================================
+let g:neuron_dir=expand("~/Zettelkasten/")
+let g:neuron_extension='.md'
+func! g:CustomNeuronIDGenerator(title)
+    return substitute(a:title, " ", "-", "g")
+endf
+
+" You need ag with neuron.vim
+let g:ackprg='ag --nogroup --nocolor --column'
+" Same effect as above but will report every line
+" let g:ackprg='ag --vimgrep'

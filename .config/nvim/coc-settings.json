@@ -6,7 +6,11 @@
       "",
       "Emjames",
       "Modelica",
-      "rightarrow"
+      "backlinks",
+      "folgezettel",
+      "rightarrow",
+      "zettel",
+      "zettels"
     ],
     "cSpell.ignoreWords": [
       ""

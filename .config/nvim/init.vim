@@ -308,7 +308,7 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 let g:neuron_dir=expand("~/Zettelkasten/")
 let g:neuron_extension='.md'
 func! g:CustomNeuronIDGenerator(title)
-    return substitute(a:title, " ", "-", "g")
+    return substitute(a:title, "\\s\\|[^A-Za-z0-9]", "-", "g")
 endf
 
 " You need ag with neuron.vim

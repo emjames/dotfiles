@@ -231,3 +231,6 @@ export PATH="$PATH:$HOME/.platformio/penv/bin/"
 export PATH="$PATH:$HOME/.rvm/bin"
 source $HOME/.rvm/scripts/rvm
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+function randomtoken() {
+    od -d /dev/urandom | head -1 | sha512sum
+}

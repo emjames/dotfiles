@@ -17,14 +17,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'ap/vim-css-color'
 Plug 'Chiel92/vim-autoformat'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-startify'
 Plug 'ferrine/md-img-paste.vim'
-Plug 'fiatjaf/neuron.vim'
-" Plug 'chiefnoah/neuron-v2.vim'
 Plug 'mileszs/ack.vim'
+Plug 'preservim/tagbar'
 
 " Python coc-jedi
 " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -231,7 +230,8 @@ hi User5 ctermfg=Yellow ctermbg=24
 " Mappings 
 " ========================================
 " Mappings Emjames
-nmap <C-b> :NERDTreeToggle<CR>
+nmap <C-c> :TagbarToggle<CR>
+" nmap <C-c> :NERDTreeToggle<CR>
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k

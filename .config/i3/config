@@ -197,7 +197,8 @@ bindsym $mod+Shift+Tab move container to workspace back_and_forth
 
 # Run Chromium with calendar
 #exec chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep
-assign [class="Chromium-browser" instance="crx_kjbdgfilnfhdoflbpgamdcdgpehopbep"] $ws9
+#assign [class="Chromium-browser" instance="crx_kjbdgfilnfhdoflbpgamdcdgpehopbep"] $ws9
+assign [class="Google-chrome" instance="crx_kjbdgfilnfhdoflbpgamdcdgpehopbep"] $ws9
 
 # Run Toggl desktop
 # exec TogglDesktop &

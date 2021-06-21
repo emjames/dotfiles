@@ -118,7 +118,6 @@ alias university='$HOME/Workspace/NCTU/'
 alias vimrc='nvim ~/.config/nvim/init.vim'
 alias zshrc='nvim ~/.zshrc'
 alias i3rc='nvim ~/.config/i3/config'
-alias googleCal='chromium-browser --profile-directory=Default --app-id=kjbdgfilnfhdoflbpgamdcdgpehopbep'
 alias wifi='nmcli d wifi'
 alias open='xdg-open'
 # open in the background disown
@@ -134,7 +133,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 
 # Use nVim as default editor
-export VISUAL=nvim
+export VISUAL='nvr'
 export EDITOR=$VISUAL
 # Enable Vim keybindings
 bindkey -v
@@ -231,6 +230,11 @@ export PATH="$PATH:$HOME/.platformio/penv/bin/"
 export PATH="$PATH:$HOME/.rvm/bin"
 source $HOME/.rvm/scripts/rvm
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# TexLive
+# Set path to include TexLive
+# if [ -d "$HOME/TeX/texlive/tlpkg/TeXLive/
+
 function randomtoken() {
     od -d /dev/urandom | head -1 | sha512sum
 }

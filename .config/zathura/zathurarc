@@ -5,3 +5,5 @@ map <C-r> recolor
 # set sandbox strict
 set synctex true
 set synctex-editor-command "nvr --remote +%{line} %{input}"
+# Don't hightlight with color
+set hightlight-transparency 0

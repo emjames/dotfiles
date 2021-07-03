@@ -238,3 +238,6 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc
 function randomtoken() {
     od -d /dev/urandom | head -1 | sha512sum
 }
+
+# RStudio
+export QT_QMAKE_EXECUTABLE="$HOME/Workspace/Qt/5.12.8/gcc_64/bin/qmake"

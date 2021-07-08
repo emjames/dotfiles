@@ -28,9 +28,7 @@ URxvt.font: xft:SpaceMono:size=14,\
 URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 
 /* *accent:         #E60012 */
-*accent:         #569CD6
-
-
+/* *accent:         #569CD6 */
 /* *cor1:           #B5BD68 */
 /* *cor2:           #8C9440 */
 /* *cor3:           #626262 */
@@ -40,6 +38,126 @@ URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 /* *preto:          #000000 */
 /* *border:         #8A8A8A */
 /* !*accent:         #B5BD68 */
+
+! -----------------------------------------------------------------------------
+! File: gruvbox-urxvt256.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 13 Dec 2013
+! -----------------------------------------------------------------------------
+ 
+URxvt.color24:  #076678
+URxvt.color66:  #427b58
+URxvt.color88:  #9d0006
+URxvt.color96:  #8f3f71
+URxvt.color100: #79740e
+URxvt.color108: #8ec07c
+URxvt.color109: #83a598
+URxvt.color130: #af3a03
+URxvt.color136: #b57614
+URxvt.color142: #b8bb26
+URxvt.color167: #fb4934
+URxvt.color175: #d3869b
+URxvt.color208: #fe8019
+URxvt.color214: #fabd2f
+URxvt.color223: #ebdbb2
+URxvt.color228: #f2e5bc
+URxvt.color229: #fbf1c7
+URxvt.color230: #f9f5d7
+URxvt.color234: #1d2021
+URxvt.color235: #282828
+URxvt.color236: #32302f
+URxvt.color237: #3c3836
+URxvt.color239: #504945
+URxvt.color241: #665c54
+URxvt.color243: #7c6f64
+URxvt.color244: #928374
+URxvt.color245: #928374
+URxvt.color246: #a89984
+URxvt.color248: #bdae93
+URxvt.color250: #d5c4a1
+ 
+! -----------------------------------------------------------------------------
+! File: obsidian-gruvbox-dark.xresources
+! Description: Obsidian Gruvbox based colorscheme
+! Author: Emjames
+! Source: 
+! Last Modified:
+! -----------------------------------------------------------------------------
+*dark0-hard:     #1d2021
+*dark0:          #282828
+*dark0-soft:     #32302f
+*dark1:          #3c3836
+*dark2:          #504945
+*dark3:          #665c54
+*dark4:          #7c6f64
+
+*gray:           #928374
+
+*light0-hard:    #f9f5d7
+*light0:         #fbf1c7
+*light0-soft:    #f2e5bc
+*light1:         #ebdbb2
+*light2:         #d5c4a1
+*light3:         #bdae93
+*light4:         #a89984
+
+*bright-red:     #fb4934
+*bright-green:   #b8bb26
+*bright-yellow:  #fabd2f
+*bright-blue:    #83a598
+*bright-purple:  #d3869b
+*bright-aqua:    #8ec07c
+*bright-orange:  #fe8019
+
+*neutral-red:    #cc241d
+*neutral-green:  #98971a
+*neutral-yellow: #d79921
+*neutral-blue:   #458588
+*neutral-purple: #b16286
+*neutral-aqua:   #689d6a
+*neutral-orange: #d65d0e
+
+*faded-red:      #9d0006
+*faded-green:    #79740e
+*faded-yellow:   #b57614
+*faded-blue:     #076678
+*faded-purple:   #8f3f71
+*faded-aqua:     #427b58
+*faded-orange:   #af3a03
+ 
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #9d0006
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #79740e
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #b57614
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #076678
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #427b58
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
+
+
+/* *************************************************** */
 
 
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
@@ -109,41 +227,41 @@ URxvt.iconFile: /home/ej/.icons/utilities-terminal-symbolic.symbolic-white.png
 !  ├─ based on sorcerer by Jeet Sukumaran (http://jeetworks.org)
 !  └─ based on mustang by Henrique C. Alves (hcarvalhoalves@gmail.com)
 
-*fading:        25
-*fadeColor:     #222222
+/* *fading:        25 */
+/* *fadeColor:     #222222 */
 
-! █▓▒░ scorcerer colors
-/* *.foreground:   #c2c2b0 */
-*.foreground:   #D8DEE9
-/* *.background:   #222222 */
-*.background:   #0b0a18
-*.cursorColor:  #c2c2b0
-! black
-*.color0:       #111111
-*.color8:       #181818
-! red
-*.color1:       #aa4450
-/* *.color9:       #ff6a6a */
-*.color9:       #E60012 
-! green
-*.color2:       #719611
-*.color10:      #b1d631
-! yellow
-*.color3:       #ff9800
-*.color11:      #87875f
-! blue
-*.color4:       #6688aa
-*.color12:      #90b0d1
-! magenta
-*.color5:       #8f6f8f
-*.color13:      #8181a6
-! cyan
-*.color6:       #528b8b
-*.color14:      #87ceeb
-! white
-*.color7:       #d3d3d3
-*.color15:      #c1cdc1
-! stylized
-*.colorIT:      #719611
-*.colorBD:      #d3d3d3
-*.colorUL:      #528b8b
+/* ! █▓▒░ scorcerer colors */
+/* /1* *.foreground:   #c2c2b0 *1/ */
+/* *.foreground:   #D8DEE9 */
+/* /1* *.background:   #222222 *1/ */
+/* *.background:   #0b0a18 */
+/* *.cursorColor:  #c2c2b0 */
+/* ! black */
+/* *.color0:       #111111 */
+/* *.color8:       #181818 */
+/* ! red */
+/* *.color1:       #aa4450 */
+/* /1* *.color9:       #ff6a6a *1/ */
+/* *.color9:       #E60012 */ 
+/* ! green */
+/* *.color2:       #719611 */
+/* *.color10:      #b1d631 */
+/* ! yellow */
+/* *.color3:       #ff9800 */
+/* *.color11:      #87875f */
+/* ! blue */
+/* *.color4:       #6688aa */
+/* *.color12:      #90b0d1 */
+/* ! magenta */
+/* *.color5:       #8f6f8f */
+/* *.color13:      #8181a6 */
+/* ! cyan */
+/* *.color6:       #528b8b */
+/* *.color14:      #87ceeb */
+/* ! white */
+/* *.color7:       #d3d3d3 */
+/* *.color15:      #c1cdc1 */
+/* ! stylized */
+/* *.colorIT:      #719611 */
+/* *.colorBD:      #d3d3d3 */
+/* *.colorUL:      #528b8b */

@@ -249,7 +249,10 @@ bar {
         colors {
           #                   border        background    text
           #focused_workspace   #FFFFFF       #000000       #FFFFFF
-          focused_workspace   #000000       #000000       #E60012
+          # focused_workspace   #000000       #000000       #E60012
+          focused_workspace   #000000       #000000       $ws_focused
+
+
           # inactive_workspace   #000000       #000000       #719611
           # # Green
           # inactive_workspace   #000000       #000000       #569CD6
@@ -257,9 +260,10 @@ bar {
           # active_workspace   #000000       #000000       #0086E6
 
           # Blue
-          inactive_workspace   #000000       #000000       #0086E6
+          # inactive_workspace   #000000       #000000       #0086E6
+          inactive_workspace   #000000         #000000       $ws_inactive
           # Green
-          active_workspace   #000000       #000000       #719611
+          active_workspace     #000000       #000000       $ws_active
         }
 }
 
@@ -269,19 +273,32 @@ set_from_resource       $arc_background_0       arc_background_0        #FFFFFF
 set_from_resource       $arc_background_1       arc_background_1        #FFFFFF
 set_from_resource       $arc_background_2       arc_background_2        #FFFFFF
 set_from_resource       $arc_blue               arc_blue                #FFFFFF
-set_from_resource       $fg                     fg                      #000
-set_from_resource       $bg                     bg                      #fff
-set_from_resource       $accent                 accent                  #fff
-set_from_resource       $border                 border                  #ccc
+set_from_resource       $fg                     foreground              #000
+set_from_resource       $bg                     background              #fff
+set_from_resource       $accent                 color3                  #fff
+set_from_resource       $border                 light1                  #ccc
 
-# Default colors ...        border   	backgr.  	text  		indicator
-client.focused              $accent 	$accent 	$accent 	$accent
-client.focused_inactive     $border  	$border  	$border		$border
-client.unfocused            $border  	$border		$border		$border
-client.urgent               $accent 	$accent 	$accent 	$accent
+# Windows
+set_from_resource       $window_text_bg         background              #333
+set_from_resource       $window_text_fg         foreground              #fff
+set_from_resource       $window_tab_bg          dark4 #333
+set_from_resource       $focused_tab_bg         dark4 #333
+set_from_resource       $focused_border         dark4 #333
+
+# Workspaces
+set_from_resource       $ws_inactive            foreground             #0f0
+set_from_resource       $ws_active              color10                 #0f0
+set_from_resource       $ws_focused             color9                  #0f0
+
+# Default colors ...        border   	    backgr.  	    text  		    indicator       child_border
+client.focused              $window_tab_bg $focused_tab_bg $window_text_bg $bg $focused_border
+client.focused_inactive     $window_text_bg $window_text_bg $window_text_fg $accent
+client.unfocused            $window_text_bg $window_text_bg $window_text_fg $accent
+client.urgent               $accent 	    $accent 	    $accent 	    $accent
 
 # Hide the top bar
 for_window [class="^.*"]    border pixel 2
+# for_window [class="^.*"]    title_format "<b>%title</b>"
 
 # Set wallpaper
 exec_always feh --randomize --bg-fill /home/ej/Pictures/Wallpapers/Picked/*

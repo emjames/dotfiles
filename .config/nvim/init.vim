@@ -202,7 +202,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-hi StatusLine cterm=bold ctermfg=white ctermbg=24
+hi StatusLine cterm=bold ctermfg=white ctermbg=100
 set statusline=
 set statusline+=%0*\ %n\      " buffer number
 set statusline+=%0*\ %f

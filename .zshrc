@@ -135,6 +135,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 # Use nVim as default editor
 export VISUAL='nvr'
 export EDITOR=$VISUAL
+alias n='nvr'
 # Enable Vim keybindings
 bindkey -v
 
@@ -241,3 +242,6 @@ function randomtoken() {
 
 # RStudio
 export QT_QMAKE_EXECUTABLE="$HOME/Workspace/Qt/5.12.8/gcc_64/bin/qmake"
+
+# pkg-config
+PKG_CONFIG_PATH=/usr/lib64/pkgconfig/

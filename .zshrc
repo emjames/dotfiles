@@ -68,6 +68,7 @@ ZSH_THEME="ys"
 
 # Don't share history
 setopt no_share_history
+unsetopt share_history
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -142,20 +143,6 @@ bindkey -v
 exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
 
 export TERMINFO=/usr/share/terminfo
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/Workspace/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/Workspace/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/Workspace/anaconda3/etc/profile.d/conda.sh"
-    else
-       export PATH="$HOME/Workspace/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # Add local Applications to path
 export PATH="$PATH:$HOME/bin/"
@@ -175,7 +162,7 @@ export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"
 alias ranger='source ranger'
 
 # The word python is too long
-alias py='python'
+alias py='python3.10'
 
 # search in zsh completion with vi
 bindkey '^P' up-line-or-search
@@ -240,8 +227,24 @@ function randomtoken() {
     od -d /dev/urandom | head -1 | sha512sum
 }
 
+function stopwatch(){
+  date1=`date +%s`;
+   while true; do
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r";
+    sleep 1
+   done
+}
+
 # RStudio
 export QT_QMAKE_EXECUTABLE="$HOME/Workspace/Qt/5.12.8/gcc_64/bin/qmake"
 
 # pkg-config
 PKG_CONFIG_PATH=/usr/lib64/pkgconfig/
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
+export PATH="$HOME/.poetry/bin:$PATH"

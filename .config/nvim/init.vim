@@ -24,6 +24,7 @@ Plug 'mhinz/vim-startify'
 Plug 'ferrine/md-img-paste.vim'
 Plug 'mileszs/ack.vim'
 Plug 'preservim/tagbar'
+Plug 'sirtaj/vim-openscad'
 
 " Python coc-jedi
 " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -67,6 +68,9 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
+set spelllang=en,cjk " cjk prevents CJK characters to be marked
+set spellsuggest=best,9
+set spell
 " Coc configs
 "
 " TextEdit might fail if hidden is not set

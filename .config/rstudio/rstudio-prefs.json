@@ -1,14 +1,13 @@
 {
     "initial_working_directory": "~",
     "editor_keybindings": "vim",
-    "posix_terminal_shell": "bash",
+    "posix_terminal_shell": "zsh",
     "font_size_points": 13,
     "terminal_path": "/usr/bin/urxvt",
     "python_type": "system",
-    "python_version": "3.9.5",
+    "python_version": "3.9.7",
     "python_path": "/usr/bin/python",
     "jobs_tab_visibility": "shown",
-    "editor_theme": "Tomorrow Night 80s",
     "global_theme": "alternate",
     "panes": {
         "quadrants": [
@@ -37,5 +36,11 @@
         "console_left_on_top": false,
         "console_right_on_top": true,
         "additional_source_columns": 0
-    }
+    },
+    "default_project_location": "~/Workspace",
+    "new_proj_git_init": true,
+    "show_indent_guides": true,
+    "graphics_backend": "cairo-png",
+    "rmd_chunk_output_inline": false,
+    "rmd_viewer_type": "pane"
 }

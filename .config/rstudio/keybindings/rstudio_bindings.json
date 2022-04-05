@@ -1,3 +1,5 @@
 {
-    "insertChunk": "Ctrl+Shift+I"
+    "insertChunk": "Ctrl+Shift+I",
+    "newRNotebook": "Ctrl+Shift+N",
+    "newSourceDoc": ""
 }

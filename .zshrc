@@ -125,7 +125,6 @@ alias open='xdg-open'
 alias openb='openb(){ open $1 &! }; openb'
 alias present='pdfpc'
 alias notes='Joplin'
-alias vim='nvim'
 alias citExplorer="java -jar ~/Applications/CiteNetExplorer/CitNetExplorer.jar &"
 alias pingg="ping www.google.com -c 5"
 
@@ -248,3 +247,44 @@ export NVM_DIR="$HOME/.config/nvm"
 
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# Compile and run C++
+function run() {
+    folder="."
+    filename="temp.cpp"
+
+    if [[ $1 ]]; then
+        folder=$1
+    fi
+
+    if [[ $2 ]]; then
+        filename=$2
+    fi
+
+    print "=====RUN====="
+    print "File: $folder/$filename"
+
+    if [[ -f "$folder/$filename" ]]
+    then
+        print "Compiling $folder/$filename"
+
+        # the name without the extension
+        # Remove the prefix ending with .
+        # ${filename#*.}
+        # Remove the suffix starting with .
+        name=${filename%.*}
+
+        # Compile
+        g++ "$folder/$filename" -o "$folder/$name"
+
+        # run
+        print "Running $folder/$name"
+        print "=====RUN====="
+        $folder/$name
+    else
+        print "File not found $folder/$filename"
+        print "=====RUN====="
+    fi
+
+
+}

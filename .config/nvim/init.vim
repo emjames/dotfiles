@@ -78,7 +78,7 @@ set hidden
 " Some servers have issues with backup files
 set nobackup
 set nowritebackup
-set undodir=~/.vim/undodir
+" set undodir=~/.vim/undodir
 set undofile
 
 " Give more space for displaying messages
@@ -319,3 +319,8 @@ endf
 let g:ackprg='ag --nogroup --nocolor --column'
 " Same effect as above but will report every line
 " let g:ackprg='ag --vimgrep'
+
+" ========================================
+" LTeX configuration
+" ========================================
+let g:coc_filetype_map = {'tex': 'latex'}

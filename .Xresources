@@ -20,7 +20,7 @@ URxvt.matcher.button: 1
 URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
 URxvt.font: xft:SpaceMono:size=14,\
-            xft:InconsolataN:size=18,\
+            xft:InconsolataN:size=14,\
             xft:monospace:size=14,\
             xft:Noto Sans CJK TC:regular:pixelsize=14
             xft:FiraCode:size=12,\

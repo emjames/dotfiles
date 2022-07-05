@@ -153,9 +153,9 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.npm-packages/bin/"
 
 # Add Java
-JAVA_HOME=/usr/local/java/jdk1.8.0_261
+JAVA_HOME=/
 export JAVA_HOME
-export PATH="$PATH:$HOME/bin:$JAVA_HOME/bin"
+export PATH="$PATH:$JAVA_HOME"
 
 # Sync ranger path with shell
 alias ranger='source ranger'
@@ -288,3 +288,6 @@ function run() {
 
 
 }
+
+# Include Go in path
+export PATH="$PATH:$HOME/go/bin/"

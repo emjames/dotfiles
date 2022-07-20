@@ -139,7 +139,10 @@ alias n='nvr'
 # Enable Vim keybindings
 bindkey -v
 
-exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
+if (( $+commands[shuf] )) && (( $+commands[cowsay] ))
+then
+    exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
+fi
 
 export TERMINFO=/usr/share/terminfo
 

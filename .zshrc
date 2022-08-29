@@ -144,7 +144,7 @@ then
     exec whatis $(ls /bin) 2>/dev/null | shuf -n 1 | cowsay -b -W 80
 fi
 
-export TERMINFO=/usr/share/terminfo
+export TERMINFO='/usr/share/terminfo'
 
 # Add local Applications to path
 export PATH="$PATH:$HOME/bin/"
@@ -294,3 +294,13 @@ function run() {
 
 # Include Go in path
 export PATH="$PATH:$HOME/go/bin/"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+# add screen to have 256 colors
+PATH="/usr/local/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk 2/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk 2/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk 2/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk 2/completion.zsh.inc"; fi

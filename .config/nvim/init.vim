@@ -7,6 +7,9 @@ filetype off            " required for bundler
 "set rtp+=~/.config/
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/pylint.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'python-rope/ropevim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'morhetz/gruvbox'
 Plug 'lervag/vimtex'
@@ -134,10 +137,17 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gr <Plug>(coc-references)
+
+" Use Rope
+" Go To Definition
+nmap <silent> gd <C-c>rag
+" Find Occurrences
+nmap <silent> fo <C-c>raf
+
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -324,3 +334,9 @@ let g:ackprg='ag --nogroup --nocolor --column'
 " LTeX configuration
 " ========================================
 let g:coc_filetype_map = {'tex': 'latex'}
+
+" ========================================
+" vim-easy-align configuration
+" ========================================
+" Align GitHub-flavored Markdown tables
+autocmd FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>

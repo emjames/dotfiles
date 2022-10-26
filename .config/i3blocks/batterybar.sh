@@ -109,19 +109,19 @@ do
             exec i3-nagbar -t warning -m 'Battery is under 10%!' > /dev/null 2>&1
         elif (( percentages[$i] >= 10 && percentages[$i] < 20 )); then
             color="${dis_colors[1]}"
-        elif (( percentages[$i] >= 20 && percentages[$i] < 30 )); then
+        elif (( percentages[$i] >= 10 && percentages[$i] < 20 )); then
             color="${dis_colors[2]}"
-        elif (( percentages[$i] >= 30 && percentages[$i] < 40 )); then
+        elif (( percentages[$i] >= 20 && percentages[$i] < 30 )); then
             color="${dis_colors[3]}"
-        elif (( percentages[$i] >= 40 && percentages[$i] < 60 )); then
+        elif (( percentages[$i] >= 30 && percentages[$i] < 40 )); then
             color="${dis_colors[4]}"
-        elif (( percentages[$i] >= 60 && percentages[$i] < 70 )); then
+        elif (( percentages[$i] >= 40 && percentages[$i] < 60 )); then
             color="${dis_colors[5]}"
-        elif (( percentages[$i] >= 70 && percentages[$i] < 80 )); then
+        elif (( percentages[$i] >= 60 && percentages[$i] < 70 )); then
             color="${dis_colors[6]}"
-        elif (( percentages[$i] >= 80 )); then
+        elif (( percentages[$i] >= 70 && percentages[$i] < 80 )); then
             color="${dis_colors[7]}"
-        fi
+        elif (( percentages[$i] >= 80 )); then
     ;;
     esac
 

@@ -28,6 +28,9 @@ Plug 'ferrine/md-img-paste.vim'
 Plug 'mileszs/ack.vim'
 Plug 'preservim/tagbar'
 Plug 'sirtaj/vim-openscad'
+Plug 'rhysd/git-messenger.vim'
+Plug 'vim-python/python-syntax'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Python coc-jedi
 " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -61,9 +64,12 @@ augroup WrapLineInTeXFile
 augroup END
 " set linebreak
 syntax on
+set t_Co=256
 " colorscheme codedark
 colorscheme gruvbox
 " colorscheme mars
+" set background=light
+" colorscheme PaperColor
 let mapleader=" "
 let maplocalleader=";"
 " change the shape of the cursor in different modes
@@ -123,14 +129,11 @@ if has('nvim-0.4.3') || has('patch-8.2.0750')
     inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 endif
 
-" use <c-r> to confirm completion `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm
-if has('patch8.1.1068')
-  " Use `complete_info` if your (Neo)Vim version supports it.
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -340,3 +343,6 @@ let g:coc_filetype_map = {'tex': 'latex'}
 " ========================================
 " Align GitHub-flavored Markdown tables
 autocmd FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+" Improved python highlight
+let g:python_highlight_all = 1

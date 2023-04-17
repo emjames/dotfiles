@@ -29,8 +29,10 @@ Plug 'mileszs/ack.vim'
 Plug 'preservim/tagbar'
 Plug 'sirtaj/vim-openscad'
 Plug 'rhysd/git-messenger.vim'
-Plug 'vim-python/python-syntax'
+" Plug 'vim-python/python-syntax'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'dense-analysis/ale'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " Python coc-jedi
 " Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
@@ -253,6 +255,8 @@ map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
+
+
 " map <C-Shift><f>
 " Search for visually selected text
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
@@ -345,4 +349,38 @@ let g:coc_filetype_map = {'tex': 'latex'}
 autocmd FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 " Improved python highlight
-let g:python_highlight_all = 1
+" let g:python_highlight_all = 1
+
+" ========================================
+" python-mode
+"
+" For more details, read the docs
+" ========================================
+" Turn on the whole plugin
+let g:pymode = 1
+" Trin unused white spaces on save
+let g:pymode_trim_whitespaces = 1
+" Setup default options
+let g:pymode_options = 1
+" Enable pymode indentation
+let g:pymode_indent = 1
+" Enamble pymode-motion
+let g:pymode_motion = 1
+
+" === Documentation ===
+" Turn on documentation scripts
+let g:pymode_doc = 1
+" Show docs for current word
+let g:pymode_doc_bind = 'K'
+
+" === Code checking ===
+" Turn on code checking
+let g:pymode_lint = 1
+" Check code when saving
+let g:pymode_lint_on_write = 1
+" Default code checkers
+let g:pymode_lint_checkers = ['pep8', 'pyflakes', 'mccabe']
+
+" Open cwindow if errors are found
+let g:pymode_lint_cwindow = 1
+
